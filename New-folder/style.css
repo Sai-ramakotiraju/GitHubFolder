@@ -1,41 +1,47 @@
 body {
     background-image: url('Lamborghini.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;  
+    background-attachment: fixed;
     background-size: cover;
+    background-position: center 52%;
     margin: 0;
     padding: 0;
-    min-height: 100vh; 
+    min-height: 100vh;
     font-family: Arial, sans-serif;
     position: relative; 
-  }
-  
-  button {
-    background-color: white;
-    color: black;
-    border-radius: 10em;
-    font-size: 17px;
-    font-weight: 600;
+}
+
+.button-container {
+    position: fixed; 
+    bottom: 20px; 
+    width: 100%; 
+    display: flex;
+    justify-content: space-between; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+}
+
+.instagram-link, .custom-button {
     padding: 1em 2em;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
     border: 1px solid black;
     box-shadow: 0 0 0 0 black;
-    
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 1000; 
+    border-radius: 200px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 17px;
+    cursor: pointer;
 }
 
-button:hover {
-    transform: translateY(-4px) translateX(-2px);
-    box-shadow: 2px 5px 0 0 black;
+.instagram-link:hover, .custom-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-button:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
+.instagram-link:active, .custom-button:active {
+    transform: translateY(0);
 }
 .whatsapp-link {
     color: black; 
