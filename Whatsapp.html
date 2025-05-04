@@ -22,10 +22,7 @@
     document.getElementById('whatsappSwitch').addEventListener('change', function() {
       if(this.checked) {
         setTimeout(() => {
-          // Using web.whatsapp.com direct link instead of wa.me to bypass confirmation
           window.open('https://web.whatsapp.com/send?phone=918688245508&text=', '_blank');
-          
-          // Reset switch after delay
           setTimeout(() => {
             this.checked = false;
           }, 300);
