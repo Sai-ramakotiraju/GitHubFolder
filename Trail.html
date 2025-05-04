@@ -21,11 +21,9 @@
   <script>
     document.getElementById('whatsappSwitch').addEventListener('change', function() {
       if(this.checked) {
-        // Keep the switch ON for the animation duration
         setTimeout(() => {
-          // Open WhatsApp in the same tab after animation completes
           window.location.href = 'https://wa.me/918688245508';
-        }, 1500); // 1.5 seconds to complete the animation
+        }, 1500); 
       }
     });
   </script>
