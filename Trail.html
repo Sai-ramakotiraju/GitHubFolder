@@ -17,13 +17,11 @@
       <div class="shadow"></div>
     </div>
   </label>
-
   <script>
     document.getElementById('whatsappSwitch').addEventListener('change', function() {
       if(this.checked) {
         setTimeout(() => {
           window.open('https://wa.me/918688245508', '_blank');
-          
           setTimeout(() => {
             this.checked = false;
           }, 300);
