@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My WhatsApp Switch</title>
+  <link rel="stylesheet" href="Whatsapp.css">
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox" id="whatsappSwitch"> 
+    <div class="button">
+      <div class="light"></div>
+      <div class="dots"></div>
+      <div class="characters"></div>
+      <div class="shine"></div>
+      <div class="shadow"></div>
+    </div>
+  </label>
+  
+  <script>
+    document.getElementById('whatsappSwitch').addEventListener('change', function() {
+      if(this.checked) {
+        setTimeout(() => {
+          // Using web.whatsapp.com direct link instead of wa.me to bypass confirmation
+          window.open('https://web.whatsapp.com/send?phone=918688245508&text=', '_blank');
+          
+          // Reset switch after delay
+          setTimeout(() => {
+            this.checked = false;
+          }, 300);
+        }, 1500);
+      }
+    });
+  </script>
+</body>
+</html>
