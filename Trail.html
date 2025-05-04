@@ -22,8 +22,12 @@
     document.getElementById('whatsappSwitch').addEventListener('change', function() {
       if(this.checked) {
         setTimeout(() => {
-          window.location.href = 'https://wa.me/918688245508';
-        }, 1500); 
+          window.open('https://wa.me/918688245508', '_blank');
+          
+          setTimeout(() => {
+            this.checked = false;
+          }, 300);
+        }, 1500);
       }
     });
   </script>
