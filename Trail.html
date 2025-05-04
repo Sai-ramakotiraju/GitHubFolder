@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switch Page</title>
+  <link rel="stylesheet" href="Trail.css">
+</head>
+<body>
+  <label class="switch">
+    <input type="checkbox" id="whatsappSwitch"> 
+    <div class="button"> 
+      <div class="light"></div>
+      <div class="dots"></div>
+      <div class="characters"></div>
+      <div class="shine"></div>
+      <div class="shadow"></div>
+    </div>
+  </label>
+
+  <script>
+    document.getElementById('whatsappSwitch').addEventListener('change', function() {
+      if(this.checked) {
+        // Keep the switch ON for the animation duration
+        setTimeout(() => {
+          // Open WhatsApp in the same tab after animation completes
+          window.location.href = 'https://wa.me/918688245508';
+        }, 1500); // 1.5 seconds to complete the animation
+      }
+    });
+  </script>
+</body>
+</html>
